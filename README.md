@@ -1,4 +1,4 @@
-<img width="1918" height="1078" alt="Task-3-TaskModal" src="https://github.com/user-attachments/assets/514283e0-aabe-4d93-8204-89803abe4767" /># Kaiburr Assessment - Task 3: Web UI Forms
+Kaiburr Assessment - Task 3: Web UI Forms
 
 ## 📋 Task Description
 
