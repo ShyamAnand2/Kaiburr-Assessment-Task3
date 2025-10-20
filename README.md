@@ -41,28 +41,96 @@ Develop a web application UI to interact with the Task Manager REST API using Re
 
 ## 📁 Project Structure
 
-task-manager-ui/
-├── public/
-│ ├── index.html
-│ ├── favicon.ico
-│ └── manifest.json
-├── src/
-│ ├── components/
-│ │ ├── TaskList.tsx # Main table with CRUD operations
-│ │ ├── CreateTaskModal.tsx # Task creation form
-│ │ ├── SearchBar.tsx # Search and create button
-│ │ └── ExecutionHistory.tsx # Execution history display
-│ ├── services/
-│ │ └── taskService.ts # API integration layer
-│ ├── types/
-│ │ └── Task.ts # TypeScript interfaces
-│ ├── App.tsx # Main application component
-│ ├── App.css # Global styles (dark theme)
-│ ├── index.tsx # Application entry point
-│ └── index.css # Base styles
-├── package.json
-├── tsconfig.json
-└── README.md
+```C:.
+|   .gitattributes
+|   .gitignore
+|   Dockerfile
+|   HELP.md
+|   mvnw
+|   mvnw.cmd
+|   pom.xml
+|   structure.txt
+|   
++---.mvn
+|   \---wrapper
+|           maven-wrapper.properties
+|           
++---.vscode
+|       settings.json
+|       
++---Kubernetes_YAML
+|       app-deployment.yaml
+|       mongodb-deployment.yaml
+|       rbac.yaml
+|       
++---src
+|   +---main
+|   |   +---java
+|   |   |   \---com
+|   |   |       \---platinum
+|   |   |           \---task_manager
+|   |   |                   CorsConfig.java
+|   |   |                   PlatinumTaskManagerApplication.java
+|   |   |                   Task.java
+|   |   |                   TaskController.java
+|   |   |                   TaskExecution.java
+|   |   |                   TaskRepository.java
+|   |   |                   
+|   |   \---resources
+|   |       |   application.properties
+|   |       |   
+|   |       +---static
+|   |       \---templates
+|   \---test
+|       \---java
+|           \---com
+|               \---platinum
+|                   \---task_manager
+|                           TaskManagerApplicationTests.java
+|                           
+\---target
+    |   task-manager-0.0.1-SNAPSHOT.jar
+    |   task-manager-0.0.1-SNAPSHOT.jar.original
+    |   
+    +---classes
+    |   |   application.properties
+    |   |   
+    |   \---com
+    |       \---platinum
+    |           \---task_manager
+    |                   CorsConfig.class
+    |                   PlatinumTaskManagerApplication.class
+    |                   Task.class
+    |                   TaskController.class
+    |                   TaskExecution.class
+    |                   TaskRepository.class
+    |                   
+    +---generated-sources
+    |   \---annotations
+    +---generated-test-sources
+    |   \---test-annotations
+    +---maven-archiver
+    |       pom.properties
+    |       
+    +---maven-status
+    |   \---maven-compiler-plugin
+    |       +---compile
+    |       |   \---default-compile
+    |       |           createdFiles.lst
+    |       |           inputFiles.lst
+    |       |           
+    |       \---testCompile
+    |           \---default-testCompile
+    |                   createdFiles.lst
+    |                   inputFiles.lst
+    |                   
+    \---test-classes
+        \---com
+            \---platinum
+                \---task_manager
+                        TaskManagerApplicationTests.class```
+                        
+
 
 ---
 
