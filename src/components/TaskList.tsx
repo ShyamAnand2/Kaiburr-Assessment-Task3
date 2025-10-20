@@ -21,31 +21,37 @@ const TaskList: React.FC<TaskListProps> = ({
 }) => {
   const columns = [
     {
-      title: 'Name',
+      title: 'Task Name',
       dataIndex: 'name',
       key: 'name',
-      width: 200,
-      fixed: 'left' as const,
+      width: '20%',
       render: (name: string) => (
-        <span style={{ fontWeight: 500, fontSize: '14px' }}>{name}</span>
+        <span style={{ fontWeight: 600, fontSize: '15px' }}>{name}</span>
       ),
     },
     {
       title: 'Owner',
       dataIndex: 'owner',
       key: 'owner',
-      width: 150,
+      width: '15%',
       render: (owner: string) => (
-        <Tag color="purple">{owner}</Tag>
+        <Tag color="purple" style={{ fontSize: '13px' }}>{owner}</Tag>
       ),
     },
     {
       title: 'Command',
       dataIndex: 'command',
       key: 'command',
-      width: 250,
+      width: '30%',
       render: (command: string) => (
-        <Tag color="blue" style={{ fontFamily: 'monospace', fontSize: '12px' }}>
+        <Tag 
+          color="blue" 
+          style={{ 
+            padding: '6px 12px', 
+            fontSize: '13px',
+            fontFamily: 'monospace'
+          }}
+        >
           {command}
         </Tag>
       ),
@@ -53,10 +59,13 @@ const TaskList: React.FC<TaskListProps> = ({
     {
       title: 'Executions',
       key: 'executions',
-      width: 120,
+      width: '12%',
       align: 'center' as const,
       render: (record: Task) => (
-        <Tag color={record.taskExecutions && record.taskExecutions.length > 0 ? 'green' : 'default'}>
+        <Tag 
+          color={record.taskExecutions && record.taskExecutions.length > 0 ? 'green' : 'default'}
+          style={{ fontSize: '14px', fontWeight: 600 }}
+        >
           {record.taskExecutions?.length || 0}
         </Tag>
       ),
@@ -64,27 +73,32 @@ const TaskList: React.FC<TaskListProps> = ({
     {
       title: 'Actions',
       key: 'actions',
-      width: 220,
-      fixed: 'right' as const,
+      width: '23%',
       render: (record: Task) => (
         <Space size="small">
           <Button
             type="primary"
             icon={<PlayCircleOutlined />}
             onClick={() => onExecute(record.id!)}
-            size="small"
+            size="middle"
+            style={{ fontWeight: 500 }}
           >
             Execute
           </Button>
           <Popconfirm
-            title="Delete task?"
+            title="Delete this task?"
             description="This action cannot be undone."
             onConfirm={() => onDelete(record.id!)}
-            okText="Delete"
+            okText="Yes, Delete"
             cancelText="Cancel"
             okButtonProps={{ danger: true }}
           >
-            <Button danger icon={<DeleteOutlined />} size="small">
+            <Button 
+              danger 
+              icon={<DeleteOutlined />} 
+              size="middle"
+              style={{ fontWeight: 500 }}
+            >
               Delete
             </Button>
           </Popconfirm>
@@ -95,28 +109,38 @@ const TaskList: React.FC<TaskListProps> = ({
 
   return (
     <Card
-      title="Tasks"
+      title={
+        <span style={{ fontSize: '20px' }}>
+          📋 All Tasks
+        </span>
+      }
       extra={
-        <Button icon={<ReloadOutlined />} onClick={onRefresh}>
+        <Button 
+          icon={<ReloadOutlined />} 
+          onClick={onRefresh}
+          size="middle"
+          style={{ fontWeight: 500 }}
+        >
           Refresh
         </Button>
       }
+      bodyStyle={{ padding: 0 }}
     >
       <Table
         columns={columns}
         dataSource={tasks}
         loading={loading}
         rowKey="id"
-        scroll={{ x: 1000 }}
         expandable={{
           expandedRowRender: (record) => <ExecutionHistory executions={record.taskExecutions || []} />,
           rowExpandable: (record) => (record.taskExecutions?.length || 0) > 0,
         }}
         pagination={{ 
           pageSize: 10,
-          showTotal: (total) => `${total} total`,
-          responsive: true
+          showSizeChanger: true,
+          showTotal: (total) => `Total ${total} tasks`
         }}
+        style={{ padding: '0' }}
       />
     </Card>
   );
