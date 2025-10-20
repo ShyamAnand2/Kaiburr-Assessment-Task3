@@ -54,23 +54,19 @@ const App: React.FC = () => {
     }
   };
 
-const handleExecute = async (id: string) => {
-  console.log('🚀 Execute button clicked! Task ID:', id); // Add this
-  alert('Execute clicked for task: ' + id); // Add this
-  
-  try {
-    setLoading(true);
-    await taskService.executeTask(id);
-    message.success('Task executed successfully');
-    loadTasks();
-  } catch (error) {
-    console.error('❌ Execute error:', error);
-    message.error('Failed to execute task');
-  } finally {
-    setLoading(false);
-  }
-};
-
+  const handleExecute = async (id: string) => {
+    try {
+      setLoading(true);
+      await taskService.executeTask(id);
+      message.success('Task executed successfully');
+      loadTasks();
+    } catch (error) {
+      console.error('❌ Execute error:', error);
+      message.error('Failed to execute task');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleSearch = async (name: string) => {
     if (!name) {
@@ -98,7 +94,14 @@ const handleExecute = async (id: string) => {
               Task Manager
             </Title>
           </div>
-          <Text className="subtitle">Manage and execute your tasks efficiently</Text>
+          {/* Animated ChatGPT-like thinking text if loading */}
+          {loading ? (
+            <div style={{ marginTop: 8 }}>
+              <span className="animated-thinking">Thinking...</span>
+            </div>
+          ) : (
+            <Text className="subtitle">Manage and execute your tasks efficiently</Text>
+          )}
         </div>
       </Header>
       <Content className="app-content">
