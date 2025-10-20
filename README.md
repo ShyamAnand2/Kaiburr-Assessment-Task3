@@ -58,23 +58,11 @@ src/
 
 ## 🎨 Design Specifications
 
-### Color Palette
-- **Background:** `#1e1e1e` (Dull grey for better visibility)
-- **Cards/Tables:** `#2a2a2a`
-- **Borders:** `#3a3a3a`
-- **Primary Accent:** `#20c997` (Teal)
-- **Text:** `#ffffff` / `#e0e0e0` / `#b0b0b0`
+#### UI Design & Color System
 
-### Typography
-- **Headings:** Druk Wide Bold
-- **Body Text:** System fonts (-apple-system, Roboto, Segoe UI)
-- **Code/Commands:** Monospace
+Our Task Manager frontend features a modern, glass-inspired layout with soft gradients and rich purple-blue accents. Key sections are arranged in rounded cards with translucent, frosted glass effects, floating above a gentle background gradient. The primary palette uses vivid violet (#7b52ff) and lavender (#c288fe), paired with a relaxing blue-cyan base (#e8eafc → #c2e9fb).
 
-### Layout
-- **Max Width:** 1400px (centered)
-- **Header:** Sticky with centered title
-- **Responsive:** Horizontal scrolling tables on mobile
-- **Cards:** Glass-morphism effect with subtle borders
+The design is fully responsive—buttons, tables, and forms resize fluidly from mobile to desktop. Input controls and active elements carry subte glows and color transitions for a premium, accessible feel. Empty task lists display friendly icons within glassy cards to minimize cognitive load. Altogether, the interface delivers a calm, professional, and visually striking foundation for productivity.
 
 ---
 
@@ -173,7 +161,6 @@ Backend must have CORS enabled for `http://localhost:3000`:
 
 ### 5. Full-Stack Activation (Back-End and Front-End)
 <img width="1918" height="1078" alt="Tas-3-FullStack" src="https://github.com/user-attachments/assets/af0d7c41-9bbb-4e6a-ba55-37821cdde0e8" />
->>>>>>> b303f90a9f850bf7fb828edc9ca05b3be7c7590e
 
 ---
 
