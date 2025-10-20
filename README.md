@@ -62,17 +62,18 @@ src/
 
 Our Task Manager frontend features a modern, glass-inspired layout with soft gradients and rich purple-blue accents. Key sections are arranged in rounded cards with translucent, frosted glass effects, floating above a gentle background gradient. The primary palette uses vivid violet (#7b52ff) and lavender (#c288fe), paired with a relaxing blue-cyan base (#e8eafc → #c2e9fb).
 
-The design is fully responsive—buttons, tables, and forms resize fluidly from mobile to desktop. Input controls and active elements carry subte glows and color transitions for a premium, accessible feel. Empty task lists display friendly icons within glassy cards to minimize cognitive load. Altogether, the interface delivers a calm, professional, and visually striking foundation for productivity.
+The design is fully responsive—buttons, tables, and forms resize fluidly from mobile to desktop. Input controls and active elements carry subtle glows and color transitions for a premium, accessible feel. Empty tasks are created to display friendly icons within glassy cards to give it a professional feel.
 
 ---
 
 ## 🚀 Setup and Installation
 
 ### Prerequisites
-Ensure Node.js 20+ is installed
+
+#### Ensure Node.js 20+ is installed
 node --version
 
-Ensure backend is running on localhost:8080
+#### Ensure backend is running on localhost:8080
 Test: http://localhost:8080/tasks
 
 ### Installation Steps
