@@ -1,130 +1,114 @@
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #a3c9f9 0%, #f5fafd 100%);
+  background: linear-gradient(135deg, #e3f4fc 0%, #f7fafd 100%);
   min-height: 100vh;
-  color: #21243d;
+  color: #232945;
   box-sizing: border-box;
 }
 
-/* Main Layout */
-.app-layout {
-  min-height: 100vh;
-  padding-bottom: 32px;
-  background: linear-gradient(120deg, #a3c9f9 30%, #f5fafd 100%);
-  transition: background 1s;
-}
-
-/* Header */
-.header {
-  padding: 2rem 1rem 1rem 1rem;
-  text-align: center;
-  background: linear-gradient(90deg, #38b6ff 30%, #f5fafd 100%);
-  color: #004b87;
-  font-size: 2.7rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  border-bottom: 2px solid #38b6ff;
-  position: relative;
-}
-/* Animated subtitle - rolling ticker */
-.news-ticker {
-  width: 70vw;
-  margin: 0 auto;
-  background: linear-gradient(90deg, #e0f3ffcc 10%, #f5fafdcc 100%);
-  color: #004b87;
-  overflow: hidden;
-  border-radius: 16px;
+/* More organized header row */
+.header-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-top: 10px;
-  border: 1.5px solid #a3c9f9;
+  margin-bottom: 6px;
 }
 
-.ticker-text {
-  display: inline-block;
-  white-space: nowrap;
-  animation: ticker-move 20s linear infinite;
-  font-size: 1.15rem;
-  font-weight: 500;
-  padding: 0.35rem 1.8rem;
+.logo-icon {
+  font-size: 28px;
+  color: #38b6ff;
+  margin-right: 4px;
+}
+.main-title {
+  font-size: 1.8rem !important;
+  font-weight: 700;
+  color: #004b87;
+  letter-spacing: 1.2px;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  font-size: 1.08rem;
+  color: #2474b8;
+  padding-left: 40px;
+  margin-bottom: 0;
+}
+
+/* Top bar row holding search/create */
+.top-bar-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+/* Search bar styles -- smaller, left aligned */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+}
+
+.search-bar-inner {
+  display: flex;
+  gap: 5px;
+  width: auto;
+}
+
+.search-bar-input {
+  width: 240px;
+  padding: 6px 12px;
+  border: 1px solid #38b6ff;
+  border-radius: 7px;
+  font-size: 1rem;
   font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  background: #f1f7fa;
+  transition: border 0.2s;
 }
 
-@keyframes ticker-move {
-  0% { transform: translateX(100%);}
-  100% { transform: translateX(-100%);}
+.search-bar-input:focus {
+  outline: none;
+  border: 2px solid #004b87;
 }
 
-/* Table/Card styling (Ant Design override, optional) */
-.ant-table,
-.ant-card {
-  background: linear-gradient(105deg, #e3f0ff 30%, #f5fafd 100%);
-  border-radius: 16px !important;
-  margin-top: 1.5rem;
-  box-shadow: 0 2px 16px #a3c9f922;
-}
-
-.ant-table-thead > tr > th {
-  background: #e3f0ff !important;
-  color: #004b87 !important;
-  font-size: 1.07rem;
-}
-.ant-btn-primary {
-  background-image: linear-gradient(90deg, #38b6ff, #a3c9f9);
+.search-bar-btn {
+  background: linear-gradient(90deg,#38b6ff 30%, #a3c9f9 100%);
   color: #fff;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-weight: 600;
   border: none;
-  transition: background 0.3s;
+  font-size: 0.95rem;
+  border-radius: 7px;
+  padding: 5px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 1px 6px #38b6ff22;
 }
-.ant-btn-primary:hover, .ant-btn-primary:focus {
-  background-image: linear-gradient(90deg, #2b89c8, #38b6ff);
-  color: #fff;
-}
-
-input, .ant-input, textarea, .ant-input-affix-wrapper {
-  border-radius: 8px !important;
-  border: 1.5px solid #a3c9f9 !important;
-  font-size: 1.07rem !important;
-  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+.search-bar-btn:hover {
+  background: linear-gradient(90deg,#2474b8 10%, #38b6ff 80%);
 }
 
-/* Responsive tweaks */
-@media (max-width: 900px) {
-  .header {
-    font-size: 2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  .app-layout {
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
-  }
-  .news-ticker {
-    width: 95vw;
-    font-size: 0.95rem;
-  }
+@media (max-width: 750px) {
+  .main-title { font-size: 1.4rem !important;}
+  .search-bar-input { width: 100px; font-size: 0.89rem;}
+  .search-bar-btn { padding: 5px 10px; font-size: 0.81rem;}
+  .header-row { padding-left: 0;}
 }
-@media (max-width: 440px) {
-  .header {
-    font-size: 1.3rem;
-    padding: 1.2rem 0.3rem 0.4rem 0.3rem;
-  }
-  .app-layout {
-    padding: 0 !important;
-  }
+/* Rest as before for table/cards/footer/footer-text/animated-thinking */
+.app-footer {
+  background: #f5fafd;
+  padding: 10px 0 8px 0;
+  border-top: 1.5px solid #c0e5fc;
+}
+.footer-text {
+  text-align: center;
+  color: #24507d;
+  font-size: 0.96rem;
 }
 
-/* Cool “thinking” animated text (like ChatGPT) */
-@keyframes thinking {
-  0% { color: #004b87; }
-  20% { color: #38b6ff; }
-  40% { color: #3dd9e6; }
-  60% { color: #4a64e3; }
-  80% { color: #38b6ff;}
-  100% { color: #004b87;}
-}
 .animated-thinking {
   display: inline-block;
   font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -133,84 +117,11 @@ input, .ant-input, textarea, .ant-input-affix-wrapper {
   animation: thinking 2s infinite linear;
   letter-spacing: 1.2px;
 }
-
-::-webkit-scrollbar, .ant-table-body::-webkit-scrollbar {
-  width: 10px;
-  background: #e3f0ff;
+@keyframes thinking {
+  0%   { color:#004b87;}
+  20%  { color:#38b6ff;}
+  40%  { color:#3dd9e6;}
+  60%  { color:#4a64e3;}
+  80%  { color:#38b6ff;}
+  100% { color:#004b87;}
 }
-::-webkit-scrollbar-thumb, .ant-table-body::-webkit-scrollbar-thumb {
-  background: #a3c9f9;
-  border-radius: 10px;
-}
-
-/* Add this to src/App.css or replace the relevant parts */
-
-/* Main title styling */
-.main-title {
-  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  color: #004b87;
-  font-size: 2.6rem !important;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-align: center;
-  margin-bottom: 0.2em;
-}
-
-/* Search Bar improvements */
-.search-bar-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: linear-gradient(90deg,#e3f0ff 60%, #f5fafd 100%);
-  padding: 1.2em 0 1em 0;
-  border-radius: 14px;
-  margin-bottom: 8px;
-  box-shadow: 0 2px 8px #a3c9f933;
-}
-.search-bar-inner {
-  display: flex;
-  gap: 8px;
-  width: 400px;
-  max-width: 95vw;
-}
-.search-bar-input {
-  flex: 1;
-  padding: 0.7rem 1.2rem;
-  border-radius: 8px;
-  border: 1.5px solid #38b6ff;
-  font-size: 1.2rem;
-  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  background: #f5fbfd;
-  transition: border 0.2s;
-}
-.search-bar-input:focus {
-  outline: none;
-  border: 2px solid #004b87;
-}
-.search-bar-btn {
-  background: linear-gradient(90deg,#38b6ff 30%, #a3c9f9 100%);
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  font-size: 1.15rem;
-  border-radius: 8px;
-  padding: 0.7rem 1.2rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.search-bar-btn:hover {
-  background: linear-gradient(90deg,#004b87 30%, #38b6ff 100%);
-}
-
-/* Responsive update for smaller screens */
-@media (max-width: 600px) {
-  .main-title {
-    font-size: 2rem !important;
-  }
-  .search-bar-inner {
-    width: 100%;
-    min-width: 180px;
-    max-width: 99vw;
-  }
-}
-

@@ -24,8 +24,8 @@ const SearchBar: React.FC<Props> = ({ onSearch, onCreateClick }) => {
           onChange={e => setSearch(e.target.value)}
         />
         <button className="search-bar-btn" type="submit">🔍</button>
-        <button className="search-bar-btn" type="button" onClick={onCreateClick}>+ Create Task</button>
       </form>
+      <button className="search-bar-btn" type="button" onClick={onCreateClick}>+ Create Task</button>
     </div>
   );
 };

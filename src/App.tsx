@@ -86,26 +86,26 @@ const App: React.FC = () => {
   return (
     <Layout className="app-layout">
       <Header className="app-header">
-        <div className="header-content">
-          <span className="logo-section">
-            <ThunderboltOutlined className="logo-icon" style={{ fontSize: 36, color: "#38b6ff", marginRight: 12 }} />
-          </span>
-          <Title level={1} className="main-title">Task Manager</Title>
+        <div className="header-row">
+          <ThunderboltOutlined className="logo-icon" />
+          <Title level={2} className="main-title">Task Manager</Title>
         </div>
-        {/* Animated ChatGPT-like thinking text if loading */}
-        {loading && (
-          <div style={{ marginTop: 8 }}>
-            <span className="animated-thinking">Thinking...</span>
-          </div>
-        )}
+        <Text className="subtitle">Manage and execute your tasks efficiently</Text>
       </Header>
       <Content className="app-content">
         <div className="content-container">
-          <Space direction="vertical" size="large" style={{ width: '100%', marginTop: '16px' }}>
+          <div className="top-bar-row">
             <SearchBar
               onSearch={handleSearch}
               onCreateClick={() => setIsModalVisible(true)}
             />
+          </div>
+          <div style={{ marginTop: 12 }}>
+            {loading && (
+              <div style={{ textAlign:"center", marginBottom:"14px" }}>
+                <span className="animated-thinking">Thinking...</span>
+              </div>
+            )}
             <TaskList
               tasks={tasks}
               loading={loading}
@@ -113,7 +113,7 @@ const App: React.FC = () => {
               onExecute={handleExecute}
               onRefresh={loadTasks}
             />
-          </Space>
+          </div>
         </div>
       </Content>
       <Footer className="app-footer">
