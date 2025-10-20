@@ -86,26 +86,23 @@ const App: React.FC = () => {
   return (
     <Layout className="app-layout">
       <Header className="app-header">
-        <div className="header-row">
-          <ThunderboltOutlined className="logo-icon" />
-          <Title level={2} className="main-title">Task Manager</Title>
+        <div className="header-content">
+          <div className="logo-section">
+            <ThunderboltOutlined className="logo-icon" />
+            <Title level={2} className="app-title">
+              Task Manager
+            </Title>
+          </div>
+          <Text className="subtitle">Manage and execute your tasks efficiently</Text>
         </div>
-        <Text className="subtitle">Manage and execute your tasks efficiently</Text>
       </Header>
       <Content className="app-content">
         <div className="content-container">
-          <div className="top-bar-row">
+          <Space direction="vertical" size="large" style={{ width: '100%' }}>
             <SearchBar
               onSearch={handleSearch}
               onCreateClick={() => setIsModalVisible(true)}
             />
-          </div>
-          <div style={{ marginTop: 12 }}>
-            {loading && (
-              <div style={{ textAlign:"center", marginBottom:"14px" }}>
-                <span className="animated-thinking">Thinking...</span>
-              </div>
-            )}
             <TaskList
               tasks={tasks}
               loading={loading}
@@ -113,7 +110,7 @@ const App: React.FC = () => {
               onExecute={handleExecute}
               onRefresh={loadTasks}
             />
-          </div>
+          </Space>
         </div>
       </Content>
       <Footer className="app-footer">
