@@ -1,12 +1,12 @@
 # Kaiburr Assessment - Task 3: Web UI Forms
 
-## 📋 Task Description
+## Task Description
 
 Develop a web application UI to interact with the Task Manager REST API using React, TypeScript, and Ant Design. The application provides a modern, responsive interface for managing tasks with full CRUD operations and command execution capabilities.
 
 ---
 
-## 🎯 Features Implemented
+## Features Implemented
 
 ### Core Functionality
 ✅ **View All Tasks** - Display tasks in a responsive table with pagination  
@@ -26,7 +26,7 @@ Develop a web application UI to interact with the Task Manager REST API using Re
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Technology | Version | Purpose |
 |------------|---------|---------|
@@ -39,7 +39,7 @@ Develop a web application UI to interact with the Task Manager REST API using Re
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```
 src/
 ├── components/
@@ -56,7 +56,7 @@ src/
 ```
 ---
 
-## 🎨 Design Specifications
+## Design Specifications
 
 #### UI Design & Color System
 
@@ -66,7 +66,7 @@ The design is fully responsive—buttons, tables, and forms resize fluidly from 
 
 ---
 
-## 🚀 Setup and Installation
+## Setup and Installation
 
 ### Prerequisites
 
@@ -93,33 +93,7 @@ http://localhost:3000
 
 ---
 
-## 🚀 Setup and Installation
-
-### Prerequisites
-Ensure Node.js 20+ is installed
-node --version
-
-Ensure backend is running on localhost:8080
-Test: http://localhost:8080/tasks
-
-### Installation Steps
-
-**1. Clone the repository:**
-git clone https://github.com/ShyamAnand2/Kaiburr-Assessment-Task3.git
-cd Kaiburr-Assessment-Task3
-
-**2. Install dependencies:**
-npm install
-
-**3. Start development server:**
-npm start
-
-**4. Access the application:**
-http://localhost:3000
-
----
-
-## 🔗 API Integration
+## API Integration
 
 ### Backend Connection
 // src/services/taskService.ts
@@ -165,7 +139,7 @@ Backend must have CORS enabled for `http://localhost:3000`:
 
 ---
 
-## 🎮 Usage Guide
+## Usage Guide
 
 ### Creating a Task
 1. Click **"New Task"** button (top right)
@@ -194,7 +168,7 @@ Backend must have CORS enabled for `http://localhost:3000`:
 
 ---
 
-## 🏗️ Build for Production
+## Build for Production
 
 Create optimized production build
 npm run build
@@ -204,7 +178,7 @@ Deploy build/ folder to web server
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Run tests
 npm test
@@ -214,23 +188,7 @@ npm test -- --coverage
 
 ---
 
-## 🐛 Troubleshooting
-
-### Issue: "Failed to load tasks"
-**Solution:** Ensure backend is running on `http://localhost:8080`
-
-### Issue: CORS errors in console
-**Solution:** Add `@CrossOrigin` annotation to backend controller
-
-### Issue: Execute button not working
-**Solution:** Check backend logs and Network tab in DevTools
-
-### Issue: Tasks have no execution history
-**Solution:** Verify backend `execute` endpoint saves executions to MongoDB
-
----
-
-## 🔧 Configuration
+## Configuration
 
 ### Changing Backend URL
 Edit `src/services/taskService.ts`:
@@ -244,7 +202,7 @@ background: #1e1e1e; /* Change background color */
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 {
 "dependencies": {
@@ -258,7 +216,7 @@ background: #1e1e1e; /* Change background color */
 
 ---
 
-## 🌟 Key Highlights
+## Key Highlights
 
 1. **Modern React 19** - Latest features and performance
 2. **Type Safety** - Full TypeScript implementation
@@ -271,7 +229,7 @@ background: #1e1e1e; /* Change background color */
 
 ---
 
-## 📝 Notes
+## Notes
 
 - All screenshots include **system datetime** and **user name** as per submission requirements
 - Backend must be running before starting frontend
@@ -280,7 +238,7 @@ background: #1e1e1e; /* Change background color */
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Shyam Anand**  
 Final Year Computer and Communication Engineering Student  
@@ -289,7 +247,7 @@ Amrita Vishwa Vidyapeetham, Madurai Campus
 **Date:** October 20, 2025  
 **Assessment:** Kaiburr 2025 - Task 3
 
-## 🔗 Related Repositories
+## Related Repositories
 
 - **Task 1:** [REST API with Spring Boot](https://github.com/ShyamAnand2/Kaiburr-Assessment-Task1)
 - **Task 2:** [Kubernetes Deployment](https://github.com/ShyamAnand2/Kaiburr-Assessment-Task2)
