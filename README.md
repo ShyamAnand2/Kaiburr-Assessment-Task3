@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Kaiburr Assessment - Task 3: Web UI Forms
+=======
+Kaiburr Assessment - Task 3: Web UI Forms
+>>>>>>> b303f90a9f850bf7fb828edc9ca05b3be7c7590e
 
 ## 📋 Task Description
 
@@ -16,8 +20,12 @@ Develop a web application UI to interact with the Task Manager REST API using Re
 ✅ **View Execution History** - Expandable rows showing execution details  
 ✅ **Delete Tasks** - Remove tasks with confirmation dialog  
 
+<<<<<<< HEAD
 ### UI/UX Features
 ✅ **Dark Theme** - Professional Perplexity-inspired design  
+=======
+### UI/UX Features  
+>>>>>>> b303f90a9f850bf7fb828edc9ca05b3be7c7590e
 ✅ **Responsive Layout** - Works on desktop, tablet, and mobile  
 ✅ **Real-time Updates** - Automatic refresh after operations  
 ✅ **Loading States** - Visual feedback during API calls  
@@ -64,6 +72,7 @@ task-manager-ui/
 ├── tsconfig.json
 └── README.md
 
+<<<<<<< HEAD
 text
 
 ---
@@ -123,6 +132,35 @@ http://localhost:3000
 
 text
 
+=======
+---
+
+## 🚀 Setup and Installation
+
+### Prerequisites
+Ensure Node.js 20+ is installed
+node --version
+
+Ensure backend is running on localhost:8080
+Test: http://localhost:8080/tasks
+text
+
+### Installation Steps
+
+**1. Clone the repository:**
+git clone https://github.com/ShyamAnand2/Kaiburr-Assessment-Task3.git
+cd Kaiburr-Assessment-Task3
+
+**2. Install dependencies:**
+npm install
+
+**3. Start development server:**
+npm start
+
+**4. Access the application:**
+http://localhost:3000
+
+>>>>>>> b303f90a9f850bf7fb828edc9ca05b3be7c7590e
 ---
 
 ## 🔗 API Integration
@@ -131,8 +169,11 @@ text
 // src/services/taskService.ts
 const API_BASE_URL = 'http://localhost:8080/tasks';
 
+<<<<<<< HEAD
 text
 
+=======
+>>>>>>> b303f90a9f850bf7fb828edc9ca05b3be7c7590e
 ### API Endpoints Used
 
 | Method | Endpoint | Description |
@@ -148,13 +189,17 @@ text
 Backend must have CORS enabled for `http://localhost:3000`:
 @CrossOrigin(origins = "http://localhost:3000")
 
+<<<<<<< HEAD
 text
 
+=======
+>>>>>>> b303f90a9f850bf7fb828edc9ca05b3be7c7590e
 ---
 
 ## 📸 Screenshots
 
 ### 1. Main Task List View
+<<<<<<< HEAD
 ![Main View](screenshots/01-main-view.png)
 *Task list with search bar, create button, and responsive table*
 
@@ -173,6 +218,25 @@ text
 ### 5. Responsive Design
 ![Responsive](screenshots/05-responsive-design.png)
 *Table adapts to different screen sizes*
+=======
+<img width="1918" height="1078" alt="Task-3-localhost" src="https://github.com/user-attachments/assets/7e4fcbda-61c1-47d9-80f6-0b549e9545ad" />
+
+
+### 2. Create Task Modal
+<img width="1918" height="1078" alt="Task-3-TaskModal" src="https://github.com/user-attachments/assets/a6a78c96-3808-4bcc-8dd8-b385fe993462" />
+
+
+### 3. Task Execution History
+<img width="1918" height="1078" alt="Task-3-EXECUTE" src="https://github.com/user-attachments/assets/e81976b6-c70e-4d31-9db3-f0f845e45ca9" />
+
+
+### 4. Search Functionality
+<img width="1918" height="1077" alt="Task-3-SEARCH" src="https://github.com/user-attachments/assets/0ab656cd-bfe3-4091-a2df-979bcad1de90" />
+
+
+### 5. Full-Stack Activation (Back-End and Front-End)
+<img width="1918" height="1078" alt="Tas-3-FullStack" src="https://github.com/user-attachments/assets/af0d7c41-9bbb-4e6a-ba55-37821cdde0e8" />
+>>>>>>> b303f90a9f850bf7fb828edc9ca05b3be7c7590e
 
 ---
 
@@ -212,6 +276,7 @@ npm run build
 
 Build output in /build directory
 Deploy build/ folder to web server
+<<<<<<< HEAD
 text
 
 ---
@@ -241,6 +306,8 @@ text
 
 ### Issue: Tasks have no execution history
 **Solution:** Verify backend `execute` endpoint saves executions to MongoDB
+=======
+>>>>>>> b303f90a9f850bf7fb828edc9ca05b3be7c7590e
 
 ---
 
@@ -258,8 +325,11 @@ Edit `src/App.css` to change colors:
 background: #1e1e1e; /* Change background color */
 }
 
+<<<<<<< HEAD
 text
 
+=======
+>>>>>>> b303f90a9f850bf7fb828edc9ca05b3be7c7590e
 ---
 
 ## 📦 Dependencies
@@ -274,8 +344,11 @@ text
 }
 }
 
+<<<<<<< HEAD
 text
 
+=======
+>>>>>>> b303f90a9f850bf7fb828edc9ca05b3be7c7590e
 ---
 
 ## 🌟 Key Highlights
@@ -303,13 +376,17 @@ text
 ## 👨‍💻 Author
 
 **Shyam Anand**  
+<<<<<<< HEAD
 Final Year Computer and Communication Engineering Student  
 Amrita Vishwa Vidyapeetham, Madurai Campus  
+=======
+>>>>>>> b303f90a9f850bf7fb828edc9ca05b3be7c7590e
 
 **Date:** October 20, 2025  
 **Assessment:** Kaiburr 2025 - Task 3
 
 ---
+<<<<<<< HEAD
 
 ## 📄 License
 
@@ -321,3 +398,5 @@ This project is submitted as part of the Kaiburr Assessment 2025.
 
 - **Task 1:** [REST API with Spring Boot](https://github.com/ShyamAnand2/Kaiburr-Assessment-Task1)
 - **Task 2:** [Kubernetes Deployment](https://github.com/ShyamAnand2/Kaiburr-Assessment-Task2)
+=======
+>>>>>>> b303f90a9f850bf7fb828edc9ca05b3be7c7590e
