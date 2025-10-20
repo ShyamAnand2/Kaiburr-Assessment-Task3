@@ -142,3 +142,75 @@ input, .ant-input, textarea, .ant-input-affix-wrapper {
   background: #a3c9f9;
   border-radius: 10px;
 }
+
+/* Add this to src/App.css or replace the relevant parts */
+
+/* Main title styling */
+.main-title {
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: #004b87;
+  font-size: 2.6rem !important;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+/* Search Bar improvements */
+.search-bar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg,#e3f0ff 60%, #f5fafd 100%);
+  padding: 1.2em 0 1em 0;
+  border-radius: 14px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px #a3c9f933;
+}
+.search-bar-inner {
+  display: flex;
+  gap: 8px;
+  width: 400px;
+  max-width: 95vw;
+}
+.search-bar-input {
+  flex: 1;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  border: 1.5px solid #38b6ff;
+  font-size: 1.2rem;
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  background: #f5fbfd;
+  transition: border 0.2s;
+}
+.search-bar-input:focus {
+  outline: none;
+  border: 2px solid #004b87;
+}
+.search-bar-btn {
+  background: linear-gradient(90deg,#38b6ff 30%, #a3c9f9 100%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  font-size: 1.15rem;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.search-bar-btn:hover {
+  background: linear-gradient(90deg,#004b87 30%, #38b6ff 100%);
+}
+
+/* Responsive update for smaller screens */
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 2rem !important;
+  }
+  .search-bar-inner {
+    width: 100%;
+    min-width: 180px;
+    max-width: 99vw;
+  }
+}
+

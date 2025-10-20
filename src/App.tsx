@@ -61,7 +61,6 @@ const App: React.FC = () => {
       message.success('Task executed successfully');
       loadTasks();
     } catch (error) {
-      console.error('❌ Execute error:', error);
       message.error('Failed to execute task');
     } finally {
       setLoading(false);
@@ -88,25 +87,21 @@ const App: React.FC = () => {
     <Layout className="app-layout">
       <Header className="app-header">
         <div className="header-content">
-          <div className="logo-section">
-            <ThunderboltOutlined className="logo-icon" />
-            <Title level={2} className="app-title">
-              Task Manager
-            </Title>
-          </div>
-          {/* Animated ChatGPT-like thinking text if loading */}
-          {loading ? (
-            <div style={{ marginTop: 8 }}>
-              <span className="animated-thinking">Thinking...</span>
-            </div>
-          ) : (
-            <Text className="subtitle">Manage and execute your tasks efficiently</Text>
-          )}
+          <span className="logo-section">
+            <ThunderboltOutlined className="logo-icon" style={{ fontSize: 36, color: "#38b6ff", marginRight: 12 }} />
+          </span>
+          <Title level={1} className="main-title">Task Manager</Title>
         </div>
+        {/* Animated ChatGPT-like thinking text if loading */}
+        {loading && (
+          <div style={{ marginTop: 8 }}>
+            <span className="animated-thinking">Thinking...</span>
+          </div>
+        )}
       </Header>
       <Content className="app-content">
         <div className="content-container">
-          <Space direction="vertical" size="large" style={{ width: '100%' }}>
+          <Space direction="vertical" size="large" style={{ width: '100%', marginTop: '16px' }}>
             <SearchBar
               onSearch={handleSearch}
               onCreateClick={() => setIsModalVisible(true)}
