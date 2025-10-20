@@ -41,7 +41,8 @@ Develop a web application UI to interact with the Task Manager REST API using Re
 
 ## 📁 Project Structure
 
-```C:.
+```
+C:.
 |   .gitattributes
 |   .gitignore
 |   Dockerfile
@@ -128,9 +129,8 @@ Develop a web application UI to interact with the Task Manager REST API using Re
         \---com
             \---platinum
                 \---task_manager
-                        TaskManagerApplicationTests.class```
-                        
-
+                        TaskManagerApplicationTests.class
+```
 
 ---
 
